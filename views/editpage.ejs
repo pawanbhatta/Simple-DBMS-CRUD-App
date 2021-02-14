@@ -1,0 +1,21 @@
+
+    <div class="container">
+        <h1>This is Edit page</h1>
+    </div>
+    
+    <form action="/edit/<%= employee._id %>" method="POST">
+        <div class="form-group">
+            <label for="firstname"><%= employee.firstname %></label>
+            <input type="text" id="firstname" name="firstname" value="<%= employee.firstname %>" class="form-control" placeholder="Enter Firstname" />
+            <label for="lastname">Lastname</label>
+            <input type="text" id="lastname" name="lastname" value="<%= employee.lastname %>" class="form-control" placeholder="Enter Lastname" />
+            <label for="empcode">Emp Code</label>
+            <input type="text" id="empcode" name="empCode" value="<%= employee.empCode %>" class="form-control" placeholder="Enter empcode" />
+            <label for="salary">Salary</label>
+            <input type="text" id="salary" name="salary" value="<%= employee.salary %>" class="form-control" placeholder="Enter Salary" /> 
+            <label for="address">Address</label>
+            <input type="text" id="address" name="address" value="<%= employee.address %>" class="form-control" placeholder="Enter Address" />
+            <input type="hidden" name="_method" value="PUT">
+        </div>
+        <input type="submit" value="Save">
+    </form>
